@@ -28,7 +28,7 @@ const SellerSingle = () => {
 
         const fetchOrders = async () => {
             try {
-                const response = await fetch(`http://localhost:3002/orders?title=${title}`);
+                const response = await fetch(`https://pets-2.onrender.com/orders?title=${title}`);
 
                 if (!response.ok) {
                     throw new Error(`Error: ${response.statusText}`);
