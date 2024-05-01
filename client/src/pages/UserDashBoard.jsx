@@ -14,7 +14,7 @@ const UserDashboard = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:3002/api/users/${userid}`);
+        const response = await fetch(`https://pets-2.onrender.com/api/users/${userid}`);
         const data = await response.json();
         setUser(data);
       } catch (error) {
