@@ -34,7 +34,7 @@ const Pro = ({userid,attribute,division}) => {
             if (!wishlist.some((item) => item.id === product.id)) {
           const { id, title, description, pet_category, product_category,available, price, image, brandcode } = product;
       
-          const response = await fetch(`http://localhost:3002/api/wishlist/${userid}`, {
+          const response = await fetch(`https://pets-2.onrender.com/api/wishlist/${userid}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const Pro = ({userid,attribute,division}) => {
             if (!cart.some((item) => item.title === product.title)) {
           const { id, title, description, pet_category, product_category,available, price, image, brandcode } = product;
           setCart((prevCart) => [...prevCart, product]);
-          const response = await fetch(`http://localhost:3002/api/cart/${userid}`, {
+          const response = await fetch(`https://pets-2.onrender.com/api/cart/${userid}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
