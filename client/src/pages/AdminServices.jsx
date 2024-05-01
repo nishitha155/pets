@@ -10,7 +10,7 @@ const service = () => { // Changed component name to start with uppercase
 
   const fetchServices = async () => {
     try {
-      const response = await fetch('http://localhost:3002/api/services');
+      const response = await fetch('https://pets-2.onrender.com/api/services');
       const data = await response.json();
       setServices(data);
     } catch (error) {
