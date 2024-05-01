@@ -16,7 +16,7 @@ const PaymentForm = () => {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await fetch(`http://localhost:3002/api/cart/${userid}`);
+        const response = await fetch(`https://pets-2.onrender.com/api/cart/${userid}`);
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
@@ -117,7 +117,7 @@ const PaymentForm = () => {
 
     try {
       // Make a POST request to the backend to store the order
-      const response = await fetch(`http://localhost:3002/api/orders/${userid}`, {
+      const response = await fetch(`https://pets-2.onrender.com/api/orders/${userid}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
