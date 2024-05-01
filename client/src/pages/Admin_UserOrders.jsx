@@ -13,7 +13,7 @@ const Admin_UserOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch('http://localhost:3002/api/orders');
+        const response = await fetch('https://pets-2.onrender.com/api/orders');
         const data = await response.json();
         setOrders(data);
       } catch (error) {
@@ -88,7 +88,7 @@ const Admin_UserOrders = () => {
                         {order.products.map(product => (
                           <>
                             <div key={product.title} style={{ display: 'flex',flexWrap:'wrap' }}>
-                              <Image src={`http://localhost:3002/uploads/${product.image}`} alt={product.title} boxSize="5vw" style={{ margin: '1px 58px' }} />
+                              <Image src={`https://pets-2.onrender.com/uploads/${product.image}`} alt={product.title} boxSize="5vw" style={{ margin: '1px 58px' }} />
                               <Box style={{ display: 'flex',flexWrap:'wrap' }} >
                                 <Box style={{ width: '27rem' }}>
                                   <p style={{
