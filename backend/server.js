@@ -6,7 +6,7 @@ const dotenv= require('dotenv');
 const app = express();
 const cors = require('cors');
 const PORT = process.env.PORT || 3002;
-const bcrypt=require('bcrypt')
+
 
 const nodemailer = require('nodemailer');
 
