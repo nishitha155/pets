@@ -15,7 +15,7 @@ const Seller_Products = () => {
     }, [bc]);
 
     const fetchProducts = () => {
-        fetch(`http://localhost:3002/api/products/${bc}`)
+        fetch(`https://pets-2.onrender.com/api/products/${bc}`)
             .then(response => response.json())
             .then(data => setFilteredItems(data))
             .catch(error => console.error(`Error fetching products for ${bc}:`, error));
@@ -27,7 +27,7 @@ const Seller_Products = () => {
 
     const deleteProduct = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3002/api/products/${id}`, {
+            const response = await fetch(`https://pets-2.onrender.com/api/products/${id}`, {
                 method: 'DELETE',
             });
 
