@@ -84,7 +84,7 @@ const UserSignup = () => {
 
   const registerUser = async () => {
     try {
-      const response = await fetch('http://localhost:3002/api/user/register', {
+      const response = await fetch('https://pets-2.onrender.com/api/user/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
