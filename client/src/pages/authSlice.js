@@ -10,7 +10,7 @@ const initialState = {
 
 export const signUpUser = createAsyncThunk('signupuser', async ({ firstNameValue, usernameValue, phoneValue, emailValue, passwordValue }) => {
   try {
-    const res = await fetch("http://localhost:3002/api/register", {
+    const res = await fetch("https://pets-2.onrender.com/api/register", {
       method: "POST",
       headers: {
         'Content-Type': "application/json"
