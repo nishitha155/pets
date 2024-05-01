@@ -29,7 +29,7 @@ const AdminProducts = () => {
           console.log(specieFilter)
           console.log(categoryFilter)
          
-          const response = await fetch('https://pets-2.onrender.com/products?specie=${specieFilter}&brand=${brandFilter}&price=${priceFilter}&category=${categoryFilter}`);
+          const response = await fetch(`https://pets-2.onrender.com/products?specie=${specieFilter}&brand=${brandFilter}&price=${priceFilter}&category=${categoryFilter}`);
           
           // Check if the response is not successful (status code other than 200)
           if (!response.ok) {
