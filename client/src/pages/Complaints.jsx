@@ -9,7 +9,7 @@ const Complaints = () => {
 
   const fetchComplaints = async () => {
     try {
-      const response = await fetch('http://localhost:3002/api/complaints');
+      const response = await fetch('https://pets-2.onrender.com/api/complaints');
       const data = await response.json();
       setComplaints(data);
     } catch (error) {
