@@ -27,11 +27,21 @@ const helmet = require('helmet')
 
 
 
-app.use(cors());
+app.use(cors(
+  {
+    origin:["pets-sf57.vercel.app"],
+    methods:['GET','POST','PUT','DELETE'],
+    credentials:true
+  }
+));
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(express.json());
 dotenv.config({
     path:'./config.env'
+    })
+
+    app.get('/',(req,res)=>{
+      res.json('Hello')
     })
 // Connect to your MongoDB database
 mongoose.connect(process.env.MONGO_URL).then(()=>{
