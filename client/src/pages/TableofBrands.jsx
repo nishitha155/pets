@@ -44,7 +44,7 @@ const TableofBrands = () => {
 
     const fetchBrands = async () => {
         try {
-            const response = await fetch(`http://localhost:3002/fetchbrands`);
+            const response = await fetch(`https://pets-2.onrender.com/fetchbrands`);
             if (!response.ok) {
                 throw new Error(`Error: ${response.statusText}`);
             }
@@ -62,7 +62,7 @@ const TableofBrands = () => {
 
     const deleteBrand = async (brandname) => {
         try {
-            const response = await fetch(`http://localhost:3002/delete/brands/${brandname}`, {
+            const response = await fetch(`https://pets-2.onrender.com/delete/brands/${brandname}`, {
                 method: 'DELETE',
             });
 
