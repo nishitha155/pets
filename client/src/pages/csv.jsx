@@ -22,7 +22,7 @@ function CsvApp() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:3002/csvupload', formData, {
+      const response = await axios.post('https://pets-2.onrender.com/csvupload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
