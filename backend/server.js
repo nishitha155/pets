@@ -420,7 +420,7 @@ app.post('/csvupload',upload.single('file'), (req, res) => {
     if (existingUser) {
       return res.status(400).json({ message: 'Username already exists' });
     }
-    const hashpass = await bcrypt.hash(req.body.password, 10);
+    const hashpass = req.body.password;
     if (svalidateform(req.body.phone, req.body.email, req.body.password)) {
       const newUser=new User({
         fullname: req.body.fullname,
@@ -451,7 +451,7 @@ app.post('/csvupload',upload.single('file'), (req, res) => {
       return res.status(400).json({ message: 'Username already exists' });
     }
     
-    const hashpass = await bcrypt.hash(req.body.password, 10);
+    const hashpass = req.body.password;
     if (svalidateform(req.body.phone, req.body.email, req.body.password)) {
     const newSeller=new Brand({
         brandname: req.body.fullname,
@@ -485,7 +485,7 @@ app.post('/csvupload',upload.single('file'), (req, res) => {
       if (userfound) {
         // Compare the provided password with the hashed password stored in the database
         console.log(userfound.password)
-        const passwordMatch = await bcrypt.compare(password, userfound.password);
+        const passwordMatch = userfound.password;
        console.log(passwordMatch)
         if (passwordMatch) {
           // Passwords match, authentication successful
@@ -523,7 +523,7 @@ app.post('/csvupload',upload.single('file'), (req, res) => {
       if (seller) {
         // Compare the provided password with the hashed password stored in the database
         console.log(seller.password)
-        const passwordMatch = await bcrypt.compare(password, seller.password);
+        const passwordMatch = seller.password;
        console.log(passwordMatch)
         if (passwordMatch) {
           // Passwords match, authentication successful
