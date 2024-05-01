@@ -27,7 +27,13 @@ const helmet = require('helmet')
 
 
 
-
+app.use(cors(
+    {
+        origin:["https://pets-qde9.vercel.app"],
+        methods:['GET','POST'],
+        credentials:true
+    }
+))
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(express.json());
 dotenv.config({
